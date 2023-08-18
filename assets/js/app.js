@@ -3,10 +3,14 @@ const tweetList = document.getElementById('tweet-list')
 
 //Event Listeners
 
+eventListeners();
+
 function eventListeners() {
     document.querySelector('#form').addEventListener('submit', newTweet)
+
+    // Remove tweet from the list
+    tweetList.addEventListener('click', removeTweet)
 }
-eventListeners();
 
 
 //Functions
@@ -37,3 +41,12 @@ function newTweet(e) {
 
 }
 
+//Removes tweet from the DOM
+
+function removeTweet(e) {
+    if(e.target.classList.contains('remove-tweet')) {
+        console.log('Yes');
+    } else {
+        console.log('No')
+    }
+}
