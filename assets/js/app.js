@@ -27,5 +27,13 @@ function newTweet(e) {
     const li = document.createElement('li')
     li.textContent = tweet;
     tweetList.appendChild(li);
+
+
+    //Add the remove button to each tweet
+    li.appendChild(removeBtn);
+
+    // Add to the list
+    tweetList.appendChild(li);
+
 }
 
