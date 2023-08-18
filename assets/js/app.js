@@ -13,6 +13,6 @@ eventListeners();
 
 function newTweet(e) {
     e.preventDefault()
-
-    console.log('Form Submitted')
+    const tweet = document.getElementById('tweet').value
+    console.log(tweet)
 }
