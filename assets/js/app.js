@@ -1,5 +1,5 @@
 //Variables
-
+const tweetList = document.getElementById('tweet-list')
 
 //Event Listeners
 
@@ -19,5 +19,6 @@ function newTweet(e) {
 
     const li = document.createElement('li')
     li.textContent = tweet;
+    tweetList.appendChild(li);
 }
 
