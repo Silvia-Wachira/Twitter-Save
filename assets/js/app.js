@@ -14,5 +14,10 @@ eventListeners();
 function newTweet(e) {
     e.preventDefault()
     const tweet = document.getElementById('tweet').value
-    console.log(tweet)
+
+    //create an <li> element
+
+    const li = document.createElement('li')
+    li.textContent = tweet;
 }
+
