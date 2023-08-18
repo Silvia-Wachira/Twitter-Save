@@ -12,8 +12,15 @@ eventListeners();
 //Functions
 
 function newTweet(e) {
-    e.preventDefault()
+    e.preventDefault();
+
+    //Read the textarea value
     const tweet = document.getElementById('tweet').value
+
+    //create the remove btn
+    const removeBtn = document.createElement('a')
+    removeBtn.classList = 'remove-tweet';
+    removeBtn.textContent = 'X'
 
     //create an <li> element
 
