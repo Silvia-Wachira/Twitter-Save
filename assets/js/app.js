@@ -32,13 +32,15 @@ function newTweet(e) {
     li.textContent = tweet;
     tweetList.appendChild(li);
 
-
     //Add the remove button to each tweet
     li.appendChild(removeBtn);
 
     // Add to the list
     tweetList.appendChild(li);
 
+    //Add to local storage
+    
+    addTweetLocalStorage(tweet);
 }
 
 //Removes tweet from the DOM
@@ -49,4 +51,9 @@ function removeTweet(e) {
     } else {
         console.log('No')
     }
+}
+
+//Adds the tweet into the local storage
+function addTweetLocalStorage(tweet) {
+
 }
