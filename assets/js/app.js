@@ -47,7 +47,7 @@ function newTweet(e) {
 
 function removeTweet(e) {
     if(e.target.classList.contains('remove-tweet')) {
-        console.log('Yes');
+        console.log('Yes!');
     } else {
         console.log('No')
     }
