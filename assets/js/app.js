@@ -53,7 +53,8 @@ function removeTweet(e) {
 
 //Adds the tweet into the local storage
 function addTweetLocalStorage(tweet) {
-    console.log('Hello from local storage');
+    let tweets = getTweetFromStorage();
+    console.log(tweets)
 }
 
 function getTweetFromStorage(){
