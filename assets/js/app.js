@@ -47,13 +47,17 @@ function newTweet(e) {
 
 function removeTweet(e) {
     if(e.target.classList.contains('remove-tweet')) {
-        console.log('Yes!');
-    } else {
-        console.log('No')
+        e.target.parentElement.remove();
     }
 }
 
 //Adds the tweet into the local storage
 function addTweetLocalStorage(tweet) {
+    console.log('Hello from local storage');
+}
 
+function getTweetFromStorage(){
+    let tweets;
+    //Get the values, if null is returned then we create an empty array
+    
 }
