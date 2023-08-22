@@ -56,16 +56,18 @@ function addTweetLocalStorage(tweet) {
     let tweets = getTweetFromStorage();
     //Add the tweet into the array
     tweets.push(tweet)
+    //Convert tweet array into string
+    localStorage.setItem('tweets', JSON.stringify() );
 }
 
 function getTweetFromStorage(){
     let tweets;
-    const tweetsLS = localStorage.getItem('tweets')
+    const tweetsLS = localStorage.getItem('tweets');
     //Get the values, if null is returned then we create an empty array
     if(tweetsLS === null) {
         tweets = [];
     } else {
-        tweets = JSON.parse( tweetsLS )
+        tweets = JSON.parse( tweetsLS );
     }
     return tweets;
 }
