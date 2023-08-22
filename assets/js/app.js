@@ -59,5 +59,9 @@ function addTweetLocalStorage(tweet) {
 function getTweetFromStorage(){
     let tweets;
     //Get the values, if null is returned then we create an empty array
-    
+    if(localStorage.getItem('tweets') === null) {
+        tweets = [];
+    } else {
+        tweets = JSON.parse( localStorage.getItem('tweets'))
+    }
 }
