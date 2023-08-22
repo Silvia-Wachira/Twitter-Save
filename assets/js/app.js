@@ -65,4 +65,5 @@ function getTweetFromStorage(){
     } else {
         tweets = JSON.parse( tweetsLS )
     }
+    return tweets;
 }
