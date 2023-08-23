@@ -7,7 +7,7 @@ h1, h2 {
 }
 .remove-tweet,
 .remove-tweet:hover {
-    float: right;
+    float: right ;
     cursor: pointer;
     color: red;
     font-weight: bold;
