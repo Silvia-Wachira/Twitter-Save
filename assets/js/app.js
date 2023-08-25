@@ -10,6 +10,8 @@ function eventListeners() {
 
     // Remove tweet from the list
     tweetList.addEventListener('click', removeTweet)
+    //document
+    document.addEventListener('DOMContentLoaded',localStorageOnLoad); 
 }
 
 
@@ -61,7 +63,7 @@ function addTweetLocalStorage(tweet) {
     //Convert tweet array into string
     localStorage.setItem('tweets', JSON.stringify() );
 }
-
+  
 function getTweetFromStorage(){
     let tweets;
     const tweetsLS = localStorage.getItem('tweets');
