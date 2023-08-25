@@ -55,7 +55,7 @@ function removeTweet(e) {
 
 //Adds the tweet into the local storage
 function addTweetLocalStorage(tweet) {
-    let tweets = getTweetFromStorage();
+    let tweets = getTweetsFromStorage();
 
     //Add the tweet into the array
     tweets.push(tweet)
@@ -64,7 +64,7 @@ function addTweetLocalStorage(tweet) {
     localStorage.setItem('tweets', JSON.stringify() );
 }
   
-function getTweetFromStorage(){
+function getTweetsFromStorage(){
     let tweets;
     const tweetsLS = localStorage.getItem('tweets');
     //Get the values, if null is returned then we create an empty array
@@ -74,4 +74,9 @@ function getTweetFromStorage(){
         tweets = JSON.parse( tweetsLS );
     }
     return tweets;
+}
+
+function localStorageOnLoad() {
+    let tweets = getTweetsFromStorage();
+    console.log(tweets);
 }
