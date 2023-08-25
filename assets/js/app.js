@@ -13,8 +13,6 @@ function eventListeners() {
     //document
     document.addEventListener('DOMContentLoaded', localStorageOnLoad); 
 }
-
-
 //Functions
 
 function newTweet(e) {
@@ -61,7 +59,7 @@ function addTweetLocalStorage(tweet) {
     tweets.push(tweet)
     
     //Convert tweet array into string
-    localStorage.setItem('tweets', JSON.stringify() );
+    localStorage.setItem('tweets', JSON.stringify(tweets) );
 }
   
 function getTweetsFromStorage(){
@@ -76,9 +74,10 @@ function getTweetsFromStorage(){
     return tweets;
 }
 
+//Prints local storage tweets on load
 function localStorageOnLoad() {
     let tweets = getTweetsFromStorage();
-    //loop through storage and print thr values
+    //loop through storage and print the values
     tweets.forEach(function(tweet){
         const removeBtn = document.createElement('a')
         removeBtn.classList = 'remove-tweet';
