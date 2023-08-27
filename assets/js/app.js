@@ -51,7 +51,6 @@ function removeTweet(e) {
     if(e.target.classList.contains('remove-tweet')) {
         e.target.parentElement.remove();
     }
-    console.log()
     //Remove from storage
     removeTweetLocalStorage( e.target.parentElement.textContent )
 }
@@ -100,5 +99,5 @@ function localStorageOnLoad() {
 //Removes the tweet from local storage
 
 function removeTweetLocalStorage(tweet) {
-    
+    let tweets = getTweetsFromStorage()
 }
