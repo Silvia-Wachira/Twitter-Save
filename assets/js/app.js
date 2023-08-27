@@ -100,4 +100,14 @@ function localStorageOnLoad() {
 
 function removeTweetLocalStorage(tweet) {
     let tweets = getTweetsFromStorage()
+
+    //Remove the  X from the tweet
+    const tweetDelete = tweet.subString(0, tweet.length - 1)
+
+    //Loop through the tweets and remove the tweet that's equal
+    tweets.forEach(function(tweetsLS){
+        if(tweetDelete === tweetsLS){
+            console.log('yes')
+        }
+    })
 }
