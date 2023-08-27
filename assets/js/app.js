@@ -6,10 +6,12 @@ const tweetList = document.getElementById('tweet-list')
 eventListeners();
 
 function eventListeners() {
+    
     document.querySelector('#form').addEventListener('submit', newTweet)
 
     // Remove tweet from the list
     tweetList.addEventListener('click', removeTweet)
+
     //document
     document.addEventListener('DOMContentLoaded', localStorageOnLoad); 
 }
@@ -49,6 +51,9 @@ function removeTweet(e) {
     if(e.target.classList.contains('remove-tweet')) {
         e.target.parentElement.remove();
     }
+    console.log( e.target.parentElement.textContent)
+    //Remove from storage
+    // removeTweetLocalStorage( )
 }
 
 //Adds the tweet into the local storage
@@ -84,7 +89,7 @@ function localStorageOnLoad() {
         removeBtn.textContent = 'X'
     
         //create an <li> element
-    
+     
         const li = document.createElement('li')
         li.textContent = tweet;
         tweetList.appendChild(li);
