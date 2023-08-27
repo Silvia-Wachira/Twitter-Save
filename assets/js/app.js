@@ -46,6 +46,7 @@ function newTweet(e) {
 
     //print the alert
     alert('tweet added')
+    this.reset()
 }
 
 //Removes tweet from the DOM
