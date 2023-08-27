@@ -107,7 +107,8 @@ function removeTweetLocalStorage(tweet) {
     //Loop through the tweets and remove the tweet that's equal
     tweets.forEach(function(tweetsLS){
         if(tweetDelete === tweetsLS){
-            console.log('yes')
+            tweets.splice(index, 1)
         }
-    })
+    });
+    localStorage.setItem('tweets', JSON.stringify(tweets));
 }
