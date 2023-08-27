@@ -43,6 +43,9 @@ function newTweet(e) {
     //Add to local storage
     
     addTweetLocalStorage(tweet);
+
+    //print the alert
+    alert('tweet added')
 }
 
 //Removes tweet from the DOM
